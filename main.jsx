@@ -44,7 +44,8 @@ var Main = React.createClass({
   },
   render : function () {
     return (
-      <button onClick = {this.handleClick}>Add Counter</button>
+    <div>{this.state.myCounters}
+      <button onClick = {this.handleClick}>Add Counter</button></div>
     )
   }
 })
