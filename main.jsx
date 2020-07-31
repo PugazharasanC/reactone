@@ -15,7 +15,7 @@ var Result = React.createClass({
     return <p>{this.props.counterValue}</p>;
   },
 });
-var Main = React.createClass({
+var Div = React.createClass({
   getInitialState: function () {
     return { counter: 0 };
   },
@@ -34,4 +34,18 @@ var Main = React.createClass({
     );
   },
 });
+
+var Main = React.createClass({
+  getInitialState : function () {
+    return {myCounters : []}
+  },
+  handleClick : function () {
+    this.setState({myCounters : this.state.myCounters.push(<Div/>)})
+  },
+  render : function () {
+    return (
+      <button onClick = {this.handleClick}/>
+    )
+  }
+})
 ReactDOM.render(<Main />, document.getElementById("root"));
