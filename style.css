@@ -3,7 +3,12 @@ div{
     margin: 2ex;
     padding: 20px;
 }
+p{
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 button {
     size: 4ex;
+    font-size: large;
     background-color: darkturquoise;
 }
