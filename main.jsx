@@ -40,11 +40,11 @@ var Main = React.createClass({
     return {myCounters : []}
   },
   handleClick : function () {
-    this.setState({myCounters : this.state.myCounters.push(<Div/>)})
+  this.setState({myCounters : this.state.myCounters.concat([<Div/>])})
   },
   render : function () {
     return (
-      <button onClick = {this.handleClick}/>
+      <button onClick = {this.handleClick}>Add Counter</button>
     )
   }
 })
