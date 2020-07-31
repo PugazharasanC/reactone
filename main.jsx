@@ -1,9 +1,9 @@
 var Counter = React.createClass({
   handleClick: function () {
-    this.props.handleClick(this.props.increment);
+    this.props.handleClick(parseInt(this.props.value));
   },
   render: function () {
-    return <button onClick={this.handleClick}>{this.props.increment}</button>;
+    return <button onClick={this.handleClick}>{this.props.value}</button>;
   },
 });
 var Result = React.createClass({
@@ -23,10 +23,15 @@ var Div = React.createClass({
     return (
       <div /*style={{ backgroundColor : num }}*/>
         <Result counterValue={this.state.counter} />
-        <Counter handleClick={this.handleClick} increment={1} />
-        <Counter handleClick={this.handleClick} increment={2} />
-        <Counter handleClick={this.handleClick} increment={4} />
-        <Counter handleClick={this.handleClick} increment={8} />
+        <Counter handleClick={this.handleClick} increment={"-8"} />
+        <Counter handleClick={this.handleClick} increment={"-4"} />
+        <Counter handleClick={this.handleClick} increment={"-2"} />
+        <Counter handleClick={this.handleClick} increment={"-1"} />
+        <button onClick = {this.handleClick(0)}>Reset</button>
+        <Counter handleClick={this.handleClick} increment={"+1"} />
+        <Counter handleClick={this.handleClick} increment={"+2"} />
+        <Counter handleClick={this.handleClick} increment={"+4"} />
+        <Counter handleClick={this.handleClick} increment={"+8"} />
       </div>
     );
   },
