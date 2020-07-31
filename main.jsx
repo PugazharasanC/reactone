@@ -23,15 +23,15 @@ var Div = React.createClass({
     return (
       <div /*style={{ backgroundColor : num }}*/>
         <Result counterValue={this.state.counter} />
-        <Counter handleClick={this.handleClick} increment={"-8"} />
-        <Counter handleClick={this.handleClick} increment={"-4"} />
-        <Counter handleClick={this.handleClick} increment={"-2"} />
-        <Counter handleClick={this.handleClick} increment={"-1"} />
+        <Counter handleClick={this.handleClick} value={"-8"} />
+        <Counter handleClick={this.handleClick} value={"-4"} />
+        <Counter handleClick={this.handleClick} value={"-2"} />
+        <Counter handleClick={this.handleClick} value={"-1"} />
         <button onClick = {this.handleClick(0)}>Reset</button>
-        <Counter handleClick={this.handleClick} increment={"+1"} />
-        <Counter handleClick={this.handleClick} increment={"+2"} />
-        <Counter handleClick={this.handleClick} increment={"+4"} />
-        <Counter handleClick={this.handleClick} increment={"+8"} />
+        <Counter handleClick={this.handleClick} value={"+1"} />
+        <Counter handleClick={this.handleClick} value={"+2"} />
+        <Counter handleClick={this.handleClick} value={"+4"} />
+        <Counter handleClick={this.handleClick} value={"+8"} />
       </div>
     );
   },
