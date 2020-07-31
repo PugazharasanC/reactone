@@ -39,7 +39,7 @@ var Div = React.createClass({
 
 var Main = React.createClass({
   getInitialState: function () {
-    return { myCounters: [<Div />] };
+    return { myCounters: [] };
   },
   handleClick: function () {
     this.setState({ myCounters: this.state.myCounters.concat([<Div />]) });
