@@ -4,5 +4,6 @@ div{
     padding: 20px;
 }
 button {
+    size: 4ex;
     background-color: darkturquoise;
 }
