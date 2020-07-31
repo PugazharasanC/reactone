@@ -1,7 +1,10 @@
 var Counter = React.createClass({
+  handleClick : function () {
+    this.props.handleClick(this.props.increment);
+  },
   render: function () {
     return (
-      <button onClick={this.props.handleClick(this.props.increment)}>
+      <button onClick={this.handleClick}>
         {this.props.increment}
       </button>
     );
