@@ -23,8 +23,9 @@ var Div = React.createClass({
     this.setState({ counter: this.state.counter + value });
   },
   render: function () {
+    let num = "#"+(Math.random() * 100000).toString(16);
     return (
-      <div>
+      <div style = {{backgroundColor: num}} >
         <Result counterValue={this.state.counter} />
         <Counter handleClick={this.handleClick} increment={1} />
         <Counter handleClick={this.handleClick} increment={2} />
