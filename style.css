@@ -1,10 +1,6 @@
 div{
     display: flex;
 }
-div>div{
-    display: flexbox;
-    border: 2px blue dotted;
-}
 button {
     background-color: darkturquoise;
 }
