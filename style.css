@@ -1,5 +1,7 @@
 div{
     display: inline-block;
+    margin: 2ex;
+    padding: 20px;
 }
 button {
     background-color: darkturquoise;
