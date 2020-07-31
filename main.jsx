@@ -18,6 +18,9 @@ var Div = React.createClass({
   handleClick: function (value) {
     this.setState({ counter: this.state.counter + value });
   },
+  reset : function () {
+    this.handleClick(0);
+  },
   render: function () {
     // let num = "#" + (Math.random() * 100000).toString(16);
     return (
@@ -27,7 +30,7 @@ var Div = React.createClass({
         <Counter handleClick={this.handleClick} value={"-4"} />
         <Counter handleClick={this.handleClick} value={"-2"} />
         <Counter handleClick={this.handleClick} value={"-1"} />
-        <button onClick = {this.handleClick(0)}>Reset</button>
+        <button onClick = {this.reset}>Reset</button>
         <Counter handleClick={this.handleClick} value={"+1"} />
         <Counter handleClick={this.handleClick} value={"+2"} />
         <Counter handleClick={this.handleClick} value={"+4"} />
