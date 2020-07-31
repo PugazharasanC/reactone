@@ -1,13 +1,9 @@
 var Counter = React.createClass({
-  handleClick : function () {
+  handleClick: function () {
     this.props.handleClick(this.props.increment);
   },
   render: function () {
-    return (
-      <button onClick={this.handleClick}>
-        {this.props.increment}
-      </button>
-    );
+    return <button onClick={this.handleClick}>{this.props.increment}</button>;
   },
 });
 var Result = React.createClass({
@@ -23,9 +19,9 @@ var Div = React.createClass({
     this.setState({ counter: this.state.counter + value });
   },
   render: function () {
-    let num = "#"+(Math.random() * 100000).toString(16);
+    // let num = "#" + (Math.random() * 100000).toString(16);
     return (
-      <div style = {{backgroundColor: num}} >
+      <div /*style={{ backgroundColor : num }}*/>
         <Result counterValue={this.state.counter} />
         <Counter handleClick={this.handleClick} increment={1} />
         <Counter handleClick={this.handleClick} increment={2} />
@@ -37,17 +33,20 @@ var Div = React.createClass({
 });
 
 var Main = React.createClass({
-  getInitialState : function () {
-    return {myCounters : [<Div/>]}
+  getInitialState: function () {
+    return { myCounters: [<Div />] };
   },
-  handleClick : function () {
-  this.setState({myCounters : this.state.myCounters.concat([<Div/>])})
+  handleClick: function () {
+    this.setState({ myCounters: this.state.myCounters.concat([<Div />]) });
   },
-  render : function () {
+  render: function () {
     return (
-    <div>{this.state.myCounters}
-      <button onClick = {this.handleClick}>Add Counter</button></div>
-    )
-  }
-})
+      <div>
+        <button onClick={this.handleClick}>Add Counter</button>
+        <br />
+        {this.state.myCounters}
+      </div>
+    );
+  },
+});
 ReactDOM.render(<Main />, document.getElementById("root"));
