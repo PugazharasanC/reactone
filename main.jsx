@@ -1,4 +1,4 @@
-var Counter = React.createClass({
+var Button = React.createClass({
   handleClick: function () {
     this.props.handleClick(parseInt(this.props.value));
   },
@@ -19,22 +19,22 @@ var Div = React.createClass({
     this.setState({ counter: this.state.counter + value });
   },
   reset : function () {
-    this.handleClick(0);
+    this.setState({ counter: 0 });
   },
   render: function () {
     // let num = "#" + (Math.random() * 100000).toString(16);
     return (
       <div /*style={{ backgroundColor : num }}*/>
         <Result counterValue={this.state.counter} />
-        <Counter handleClick={this.handleClick} value={"-8"} />
-        <Counter handleClick={this.handleClick} value={"-4"} />
-        <Counter handleClick={this.handleClick} value={"-2"} />
-        <Counter handleClick={this.handleClick} value={"-1"} />
+        <Button handleClick={this.handleClick} value={"-8"} />
+        <Button handleClick={this.handleClick} value={"-4"} />
+        <Button handleClick={this.handleClick} value={"-2"} />
+        <Button handleClick={this.handleClick} value={"-1"} />
         <button onClick = {this.reset}>Reset</button>
-        <Counter handleClick={this.handleClick} value={"+1"} />
-        <Counter handleClick={this.handleClick} value={"+2"} />
-        <Counter handleClick={this.handleClick} value={"+4"} />
-        <Counter handleClick={this.handleClick} value={"+8"} />
+        <Button handleClick={this.handleClick} value={"+1"} />
+        <Button handleClick={this.handleClick} value={"+2"} />
+        <Button handleClick={this.handleClick} value={"+4"} />
+        <Button handleClick={this.handleClick} value={"+8"} />
       </div>
     );
   },
