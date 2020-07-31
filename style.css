@@ -1,3 +1,6 @@
-div{
-    border: 2ex blue dotted;
+div > div{
+    border: 2px blue dotted;
+}
+button {
+    background-color: darkturquoise;
 }
